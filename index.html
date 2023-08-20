@@ -9,17 +9,17 @@
     <h2>Morse translater</h2>
     <h4>Print your text on window</h4>
     <script>
-        choose = confirm("Якщо хочете перекладати з української на азбуку морзе - натисніть OK, якщо навпаки - натисніть Cancel.")
-        morze_mova = [ ".-", "-...", ".--", "....", "-..", ".", "..-..", "...-", "--..", "-.--", "..", ".---.", ".---",
+        let choose = confirm("Якщо хочете перекладати з української на азбуку морзе - натисніть OK, якщо навпаки - натисніть Cancel.")
+        let morze_mova = [ ".-", "-...", ".--", "....", "-..", ".", "..-..", "...-", "--..", "-.--", "..", ".---.", ".---",
                     "-.-", ".-..", "--", "-.","---",".--.",".--.",".-.","...","-","..-","..-.","----","-.-.",
                     "---.","--.-","--.--","-..-","..--",".-.-",]
-        ukr_mova = ["а", "б", "в", "г", "д", "е", "є", "ж", "з", "и", "і", "ї", "й",
+        let ukr_mova = ["а", "б", "в", "г", "д", "е", "є", "ж", "з", "и", "і", "ї", "й",
                     "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц",
                     "ч", "ш", "щ", "ь", "ю", "я"]
         if (choose) {
-            result = []
-            text = prompt("Введіть текст...")
-            listText = []
+            let result = []
+            let text = prompt("Введіть текст...")
+            let listText = []
             for (let i = 0; i < text.length(); i++) {
                 listText.push(text[i])
             }
@@ -28,10 +28,10 @@
                 if (listText[i] === " ") {
                     i += 1
                 } else {
-                index = ukr_mova.indexOf(text[i], 0)
+                let index = ukr_mova.indexOf(text[i], 0)
                 result.push(`${morze_mova[index]} `)
                 }
-            str_result = result.join("")    
+            let str_result = result.join("")    
             alert(str_result)
             }
         }
