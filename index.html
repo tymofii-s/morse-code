@@ -16,7 +16,25 @@
         ukr_mova = ["а", "б", "в", "г", "д", "е", "є", "ж", "з", "и", "і", "ї", "й",
                     "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц",
                     "ч", "ш", "щ", "ь", "ю", "я"]
-        
+        if (choose.length() > 0) {
+            result = []
+            text = prompt("Введіть текст...")
+            listText = []
+            for (let i = 0; i < text.length(); i++) {
+                listText.push(text[i])
+            }
+            
+            for (let i = 0; i < listText; i++) {
+                if (listText[i] === " ") {
+                    i += 1
+                } else {
+                index = ukr_mova.indexOf(text[i], 0)
+                result.push(`${morze_mova[index]} `)
+                }
+            str_result = result.join("")    
+            alert(str_result)
+            }
+        }
     </script>
     <!-- <input type="submit" value="Translate"> -->
 </body>
